@@ -19,9 +19,12 @@ class AppRouter {
       ),
       GoRoute(
         name: RoutesConstant.about,
-        path: "/aboutus",
+        path: "/aboutus/:username",
         pageBuilder: (context, state) {
-          return const MaterialPage(child: AboutUs());
+          return MaterialPage(
+              child: AboutUs(
+            username: state.pathParameters["username"]!,
+          ));
         },
       ),
       GoRoute(

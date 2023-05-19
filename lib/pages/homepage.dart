@@ -19,7 +19,8 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  GoRouter.of(context).pushNamed(RoutesConstant.about);
+                  GoRouter.of(context).pushNamed(RoutesConstant.about,
+                      pathParameters: {"username": "Nitesh Paudel"});
                 },
                 child: const Text("About Page")),
             const SizedBox(
@@ -27,7 +28,9 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  GoRouter.of(context).pushNamed(RoutesConstant.contact);
+                  GoRouter.of(context).pushNamed(
+                    RoutesConstant.contact,
+                  );
                 },
                 child: const Text("Contact Us Page")),
           ],
