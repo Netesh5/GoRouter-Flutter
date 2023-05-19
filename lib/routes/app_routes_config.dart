@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gorouternavigation/pages/error_page.dart';
-import 'package:gorouternavigation/routes/app_routes_constant.dart';
 
 import '../pages/about.dart';
 import '../pages/contact.dart';
+import '../pages/error_page.dart';
 import '../pages/homepage.dart';
+import 'app_routes_constant.dart';
 
 class AppRouter {
   GoRouter router = GoRouter(
