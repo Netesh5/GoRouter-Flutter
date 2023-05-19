@@ -1,4 +1,4 @@
-# gorouternavigation
+# GoRouterNavigation
 
 A new Flutter project.
 

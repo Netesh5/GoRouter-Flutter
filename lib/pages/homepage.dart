@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:gorouternavigation/pages/login.dart';
 
 import '../routes/app_routes_constant.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -33,6 +40,17 @@ class HomePage extends StatelessWidget {
                   );
                 },
                 child: const Text("Contact Us Page")),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  context.pushReplacementNamed(RoutesConstant.login);
+                  setState(() {
+                    isAuthenticated = !isAuthenticated;
+                  });
+                },
+                child: const Text("Log out")),
           ],
         ),
       ),
