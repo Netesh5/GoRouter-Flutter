@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   context.pushReplacementNamed(RoutesConstant.login);
                   setState(() {
-                    isAuthenticated = !isAuthenticated;
+                    isAuthenticated = false;
                   });
                 },
                 child: const Text("Log out")),

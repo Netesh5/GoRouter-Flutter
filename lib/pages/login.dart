@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
         child: ElevatedButton(
             onPressed: () {
               setState(() {
-                isAuthenticated = !isAuthenticated;
+                isAuthenticated = true;
               });
 
               context.replaceNamed(RoutesConstant.homepage);

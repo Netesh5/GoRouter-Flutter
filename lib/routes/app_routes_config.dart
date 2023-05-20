@@ -49,7 +49,7 @@ class AppRouter {
         return const MaterialPage(child: ErrorPage());
       },
       redirect: (context, state) {
-        if (!isAuthenticated && state.matchedLocation == '/') {
+        if (!isAuthenticated) {
           return state.namedLocation(RoutesConstant.login);
         } else {
           return null;
